@@ -95,6 +95,8 @@ select {
 body {
     background-color: var(--white);
     color: var(--vdd-blue);
+    margin: 0 auto;
+    width: 100%;
 }
 
 p {
@@ -205,90 +207,79 @@ p {
     cursor: pointer;
 }
 
+.grid-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    grid-auto-flow: dense;
+    color: var(--vdd-blue);
 
-.container {
-    margin: 0 auto;
-    width: 100%;
+    h2 {
+        font-family: var(--fraunces);
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 900;
+        letter-spacing: .1rem;
+        padding: 50px 30px 10px 30px;
+    }
+
+    p {
+        color: var(--vdg-blue);
+        padding: 30px 30px 10px 30px;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .col__image {
+        position: relative;
+    }
+
+    .col__image img {
+        height: 100%;
+    }
+
+    .col__intro {
+
+        position: absolute;
+        bottom: 50px;
+    }
+
+    .col__design p,
+    .col__design h2 {
+        color: var(--dark-d-cyan);
+    }
+
+    .col__photography p,
+    .col__photography h2 {
+        color: var(--dark-blue);
+
+    }
+
 }
 
 
-main {
+.btn {
+    text-transform: uppercase;
     color: var(--vdd-blue);
+    font-weight: bold;
+    display: inline-block;
+    margin: 30px 3px;
+    line-height: 8px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
-    .grid-box {
-        display: grid;
-        grid-template-columns: 1fr;
-        text-align: center;
-        grid-auto-flow: dense;
+}
 
-        h2 {
-            font-family: var(--fraunces);
-            font-size: 2rem;
-            line-height: 2.5rem;
-            font-weight: 900;
-            letter-spacing: .1rem;
-            padding: 50px 30px 10px 30px;
-        }
+.btn__yellow {
+    border-bottom: 10px solid hsla(51, 100%, 49%, 0.3);
 
-        p {
-            color: var(--vdg-blue);
-            padding: 30px 30px 10px 30px;
-        }
+}
 
-        .col {
-            width: 100%;
-        }
-
-        .col__image {
-            position: relative;
-        }
-
-        .col__image img {
-            height: 100%;
-        }
-
-        .col__intro {
-
-            position: absolute;
-            bottom: 50px;
-        }
-
-        .col__design p,
-        .col__design h2 {
-            color: var(--dark-d-cyan);
-        }
-
-        .col__photography p,
-        .col__photography h2 {
-            color: var(--dark-blue);
-
-        }
-
-    }
-
-
-    .btn {
-        text-transform: uppercase;
-        color: var(--vdd-blue);
-        font-weight: bold;
-        display: inline-block;
-        margin: 30px 3px;
-        line-height: 8px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-
-    }
-
-    .btn__yellow {
-        border-bottom: 10px solid hsla(51, 100%, 49%, 0.3);
-
-    }
-
-    .btn__pear {
-        border-bottom: 10px solid hsl(7, 99%, 70%, 0.3);
-        ;
-    }
-
+.btn__pear {
+    border-bottom: 10px solid hsl(7, 99%, 70%, 0.3);
+    ;
 }
 
 .clients {
@@ -441,83 +432,79 @@ footer {
         }
     }
 
-    main {
-        .grid-box {
-            grid-template-areas: "transform__desc transform__img"
-                "standOut__img standOut__desc"
-                "design photography";
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            text-align: left;
+    .grid-box {
+        grid-template-areas: "transform__desc transform__img"
+            "standOut__img standOut__desc"
+            "design photography";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
 
-            picture {
-                img {
-                    width: 100%;
-                }
+        picture {
+            img {
+                width: 100%;
             }
+        }
 
-            p {
-                padding: 0;
-                font-size: 16px;
-            }
+        p {
+            padding: 0;
+            font-size: 16px;
+        }
 
-            h2 {
-                padding: 0;
-                font-size: 30px;
-            }
+        h2 {
+            padding: 0;
+            font-size: 30px;
+        }
 
-            .btn {
-                margin: 20px 3px;
-            }
+        .btn {
+            margin: 20px 3px;
+        }
 
-            .grid__intro {
-                width: 70%;
-                margin: 0 auto;
-
-            }
-
-            .col__design,
-            .col__photography {
-                bottom: 0;
-                text-align: center;
-
-                .col__intro {
-                    bottom: 10px;
-                    width: 70%;
-                    left: 0;
-                    right: 0;
-                    margin: 0 auto;
-                }
-            }
+        .grid__intro {
+            width: 70%;
+            margin: 0 auto;
 
         }
 
-        .col__transform__img {
-            grid-area: transform__img;
-        }
-
-        .col__transform__desc {
-            grid-area: transform__desc;
-        }
-
-        .col__standOut__img {
-            grid-area: standOut__img;
-        }
-
-        .col__standOut__desc {
-            grid-area: standOut__desc;
-        }
-
-        .col__design {
-            grid-area: design;
-        }
-
+        .col__design,
         .col__photography {
-            grid-area: photography;
+            bottom: 0;
+            text-align: center;
+
+            .col__intro {
+                bottom: 10px;
+                width: 70%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
         }
 
+    }
 
+    .col__transform__img {
+        grid-area: transform__img;
+    }
+
+    .col__transform__desc {
+        grid-area: transform__desc;
+    }
+
+    .col__standOut__img {
+        grid-area: standOut__img;
+    }
+
+    .col__standOut__desc {
+        grid-area: standOut__desc;
+    }
+
+    .col__design {
+        grid-area: design;
+    }
+
+    .col__photography {
+        grid-area: photography;
     }
 
     .clients {
