@@ -106,7 +106,7 @@ p {
     font-family: var(--barlow);
 }
 
-.header {
+nav {
     text-align: center;
     background-image: url(../images/mobile/image-header.jpg);
     background-size: cover;
@@ -376,7 +376,7 @@ footer {
 
 
 @media screen and (min-width: 700px) {
-    .header {
+    nav {
         .top-menu {
             display: flex;
             justify-content: space-between;
@@ -528,7 +528,7 @@ footer {
 }
 
 @media screen and (min-width: 900px) {
-    .header {
+    nav {
         .top-menu {
             .main-nav {
                 li a {
